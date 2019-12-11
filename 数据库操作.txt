@@ -1,0 +1,32 @@
+
+-- use myblog; 使用数据库myblog
+-- show tables;查看表
+
+-- insert into users (username,`password`,realname) values ('lisi','123','李四');增加语句  《增》
+
+-- select * from users;查询所有语句   《查》
+
+-- select id,username from users;查询某个字段语句  
+
+-- select * from users where username='zhangsan' and password='123';条件查询，某个字段的值等于什么
+-- select * from users where username='zhangsan' or password='123';
+
+
+-- select * from users where username like '%zhang%';模糊查询like
+-- select * from users where password like '%1%';
+
+
+-- select * from users where password like '%1%' order by id desc;查询后排序，order by为排序，desc为降序排序
+
+-- update users set realname='李四2' where username='lisi';	更新数据库 《改》
+
+
+-- delete from users where username='lisi'; 删除，数据不可恢复    《删》
+
+-- 软删除===>在表里另设置一个字段来表示当前的这个状态，‘1’表示这一行数据可用，‘0’表示不可用。以用来表示删除了数据
+-- update users set state=0 where username='lisi';
+
+-- update users set state=1 where username='lisi'; 恢复删除数据
+-- select * from users where state='1';
+-- select * from users where state<>'1';  '<>'==>表示不等于1的
+

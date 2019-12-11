@@ -1,0 +1,10 @@
+//redis开启
+redis-server.exe redis.windows.conf
+
+
+//redis打开服务
+redis-cli
+
+
+//清除redis里所有的信息
+flushall
